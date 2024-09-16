@@ -10,7 +10,7 @@ function AppFooter() {
             <span>Calvary</span> Charismatic Centre
           </FooterColumnHeading>
           <p>
-            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+             We are a Christ-centered community, committed to sharing the gospel and making disciples. Join us for worship, prayer, and fellowship as we grow together in faith and service.
           </p>
 
           {/* Social Media Icons */}
@@ -82,12 +82,12 @@ function AppFooter() {
             </FooterColumnList>
           </FooterColumn>
 
-          <FooterColumn>
+          <FooterColumn className="service">
             <FooterColumnHeading>Services</FooterColumnHeading>
             <FooterColumnList>
-              <FooterColumnItem style={{color: "#4b4949"}}>Saturday Prayer Meeting</FooterColumnItem>
+              <FooterColumnItem style={{color: "#cccccc"}}>Saturday Prayer Meeting</FooterColumnItem>
               <FooterColumnItem style={{color: "#c8a816", fontSize: "25px"}}>10:00 am to 11:30 am</FooterColumnItem>
-              <FooterColumnItem style={{color: "#4b4949"}}>Sunday Service</FooterColumnItem>
+              <FooterColumnItem style={{color: "#cccccc"}}>Sunday Service</FooterColumnItem>
               <FooterColumnItem style={{color: "#c8a816", fontSize: "25px"}}> 8:30 am to 11:30 am</FooterColumnItem>
             </FooterColumnList>
           </FooterColumn>

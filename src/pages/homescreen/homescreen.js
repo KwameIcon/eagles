@@ -208,7 +208,7 @@ const churchLeaders = [
   {
     id: 2,
     picture: `${ChrisOyakhilime}`,
-    name: 'Chris Oyakhilome',
+    name: 'C. Oyakhilome',
     position: 'Senior Pastor'
   },
   {
@@ -232,7 +232,7 @@ const churchLeaders = [
   {
     id: 6,
     picture: `${Dag}`,
-    name: 'Dag Heward-Mills',
+    name: 'D. Heward-Mills',
     position: 'Evangelist & Pastor'
   },
   {

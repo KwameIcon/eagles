@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { FiX } from 'react-icons/fi';
 import {
   BgImage,
+  CloseButton,
+  Controllers,
   HeaderContainer,
   HeaderTop,
   Image,
@@ -11,6 +13,7 @@ import {
   NavBarListContainer,
   NavbarsContainer,
   NavButton,
+  OpenButton,
   Overlay,
   SearchButton,
   SearchContainer,
@@ -21,6 +24,7 @@ import {
 } from "./header.styled";
 import ChurchLogo from '../../assets/logo/logo.png';
 import { Link } from 'react-router-dom';
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header = ({ textChildren, imageChildren, isZoomingOut }) => {
 
@@ -28,6 +32,7 @@ const Header = ({ textChildren, imageChildren, isZoomingOut }) => {
   const [activeIndex, setActiveIndex] = useState("Home");
   const [searchVisible, setSearchVisible] = useState(false);
   const [isHeaderFix, setIsHeaderFix] = useState(false);
+  const [isMobileNav, setIsMobileNav] = useState(false);
 
 
 // navigation buttons array
@@ -59,6 +64,8 @@ const Header = ({ textChildren, imageChildren, isZoomingOut }) => {
     })
   })
 
+
+
   return (
     <HeaderContainer>
       <BgImage>
@@ -72,7 +79,7 @@ const Header = ({ textChildren, imageChildren, isZoomingOut }) => {
           <LogoText isHeaderFix = {isHeaderFix}><span style={{ color: "gold" }}> Calvary </span> Charismatic Centre </LogoText>
         </LogoContainer>
 
-        <NavbarsContainer>
+        <NavbarsContainer isMobileNav = {isMobileNav} >
           <NavBarListContainer>
             {navButtons.map((button) => (
               <NavButton isHeaderFix = {isHeaderFix}
@@ -113,6 +120,18 @@ const Header = ({ textChildren, imageChildren, isZoomingOut }) => {
           <SearchInputField type="text" placeholder="Search the site" />
           <FiX className="closeButton" onClick={() => setSearchVisible(false)} />
         </SearchContainer>
+
+        {/* menu display on mobile view */}
+        <Controllers isHeaderFix =  {isHeaderFix}>
+          {!isMobileNav ? (
+            <OpenButton onClick={() => setIsMobileNav(true)}>
+              <FaBars/>
+          </OpenButton>) : (
+          <CloseButton onClick={() => setIsMobileNav(false)} >
+            <FaTimes/>
+          </CloseButton>)
+          }
+        </Controllers>
       </HeaderTop>
       <Showcase>{textChildren}</Showcase>
     </HeaderContainer>

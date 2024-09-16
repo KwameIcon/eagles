@@ -21,12 +21,20 @@ export const ChurchNameContainer = styled.div`
     gap: 20px;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 430px) {
+        gap: 5px;
+    }
 `
 
 export const Line = styled.div`
     width: 23%;
     height: 1px;
     background-color: gold;
+
+    @media screen and (max-width: 430px) {
+        width: 18%;
+    }
 `
 
 export const ChurchName = styled.p`
@@ -35,6 +43,11 @@ export const ChurchName = styled.p`
     text-transform: uppercase;
     color: #fff;
     font-family: 'Raleway', sans-serif;
+
+    @media screen and (max-width: 430px) {
+        width: 64%;
+        text-align: center;
+    }
 `
 
 export const ShowcaseHeaderText = styled.h1`
@@ -45,6 +58,10 @@ export const ShowcaseHeaderText = styled.h1`
     text-transform: uppercase;
     color: #fff;
     text-align: center;
+
+    @media screen and (max-width: 430px) {
+        font-size: 40px;
+    }
 `
 
 export const ShowcaseSubText = styled.p`
@@ -53,6 +70,11 @@ export const ShowcaseSubText = styled.p`
     color: #fff;
     font-family: 'Oswald', sans-serif;
     text-align: center;
+
+    @media screen and (max-width: 430px) {
+        width: 85%;
+        font-size: 14px;
+    }
 `
 
 export const ActionsContainer = styled.div`
@@ -62,6 +84,10 @@ export const ActionsContainer = styled.div`
     gap: 20px;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 430px) {
+        width: 100%;
+    }
 `
 
 export const BepartOfUsBtn = styled.div`
@@ -86,6 +112,7 @@ export const ReadMoreBtn = styled.div`
     }
 `
 
+// body
 export const Body = styled.section`
     width: 100%;
     padding: 20px;
@@ -93,6 +120,7 @@ export const Body = styled.section`
     height: auto;
 `
 
+// short message
 export const ShortMessage = styled.p`
     width: 100%;
     height: 100px;
@@ -104,6 +132,12 @@ export const ShortMessage = styled.p`
     text-align: center;
     font-size: 18px;
     font-style: italic;
+
+    @media screen and (max-width: 430px) {
+        padding: 10px 20px 20px 20px;
+        height: auto;
+        line-height: 28px;
+    }
 `
 
 export const ChurchInfoSection = styled.div`
@@ -234,7 +268,7 @@ export const ChurchInfoSectionLocationImage = styled.img`
     object-fit: cover;
 `
 
-// 
+// church groups
 export const ChurchGroupsContainer = styled.div`
     border-top: 1px solid #ccc;
 `
@@ -254,6 +288,10 @@ export const ChurchGroups = styled.ul`
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
+
+    @media screen and (max-width: 430px) {
+        justify-content: center;
+    }
 `
 
 export const ChurchGroup = styled.li`
@@ -327,7 +365,12 @@ export const LatestSermons = styled.ul`
     width: 100%;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
     align-items: center;
+
+    @media screen and (max-width: 430px) {
+        justify-content: center;
+    }
 `
 
 export const LatestSermon = styled.li`
@@ -354,8 +397,18 @@ export const LatestSermon = styled.li`
 
         &:hover{
             cursor: pointer;
-            color: goldenrod;
+            color: #fff;
             background-color: #1ea2b1;
+        }
+    }
+
+    @media screen and (max-width: 430px) {
+        width: 90dvw;
+        height: 300px;
+
+        .LatestSermonListenIcon{
+            top: 44%;
+            width: 70px;
         }
     }
 `
@@ -365,6 +418,10 @@ export const LatestSermonVideoThumpnailContainer = styled.div`
     height: 50%;
     background-color: #ccc;
     overflow: hidden;
+
+    @media screen and (max-width: 430px) {
+        height: 60%;
+    }
 `
 
 export const LatestSermonVideo = styled.video`
@@ -392,6 +449,10 @@ export const LatestSermonTextContainer = styled.div`
     display: flex;
     gap: 15px;
     flex-direction: column;
+
+    @media screen and (max-width: 430px) {
+        height: 40%;
+    }
 `
 
 export const LatestSermonTextDate = styled.p`
@@ -432,6 +493,11 @@ export const ChurchLeadersHeaderText = styled.h2`
     text-transform: capitalize;
     padding: 20px 0;
     text-align: center;
+
+    @media screen and (max-width: 430px) {
+        width: 70%;
+        text-align: left;
+    }
 `
 
 export const ChurchLeaderHeaderActions = styled.div`
@@ -462,6 +528,22 @@ export const ChurchLeaderHeaderActions = styled.div`
             cursor: pointer;
         }
     }
+
+    @media screen and (max-width: 430px) {
+        .arrow{
+            top: 5%;
+            width: 30px;
+            height: 30px;
+
+            &.left{
+                left: 75%;
+            }
+
+            &.right{
+                left: 90%;
+            }
+        }
+    }
 `
 
 export const Wrapper = styled.div`
@@ -469,6 +551,10 @@ export const Wrapper = styled.div`
     margin: auto;
     overflow-x: scroll;
     scroll-behavior: smooth;
+
+    @media screen and (max-width: 430px) {
+        width: 100%;
+    }
 `
 
 export const ChurchLeaders = styled.ul`
@@ -484,25 +570,35 @@ export const ChurchLeader = styled.li`
     flex-direction: column;
     width: 200px;
     height: 300px;
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
     overflow: hidden;
+
+    @media screen and (max-width: 430px) {
+        width: 150px;
+        height: 230px;
+    }
 `
 
 export const ChurchLeaderImageContainer = styled.div`
     width: 100%;
     height: 70%;
+    flex-shrink: none;
     position: relative;
+    overflow: hidden;
 `
 
 export const ChurchLeaderImageContainerBg = styled.div`
     position: absolute;
-    top: 15%;
+    top: 30%;
     width: 100%;
-    height: 85%;
+    height: 70%;
     background-color: goldenrod;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     z-index: 0;
+
+    @media screen and (max-width: 430px) {
+        height: 100%;
+    }
 `
 
 export const ChurchLeaderImage = styled.img`
@@ -514,17 +610,28 @@ export const ChurchLeaderImage = styled.img`
 
 export const ChurchLeaderTextContainer = styled.div`
     width: 100%;
+    height: 30%;
     padding: 20px 0;
     display: flex;
     gap: 15px;
     flex-direction: column;
     align-items: flex-start;
+
+    @media screen and (max-width: 430px) {
+        padding: 5px 0;
+        gap: 5px;
+    }
 `
 
 export const ChurchLeaderTextName = styled.p`
     text-transform: uppercase;
     font-size: 20px;
     color: #000;
+
+    @media screen and (max-width: 430px) {
+        font-size: 16px;
+        font-weight: 800;
+    }
 `
 
 export const ChurchLeaderTextPosition = styled.p`

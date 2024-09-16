@@ -40,13 +40,22 @@ export const SocialIconLink = styled.a`
 export const FooterLinks = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  flex: 3;
+  align-items: first baseline;
 `;
 
 export const FooterColumn = styled.div`
-  flex: 1;
-  min-width: 100px;
+  flex-shrink: none;
+  width: 300px;
+  /* border: 1px solid red; */
+
+  @media screen and (max-width: 430px) {
+    flex-flow: wrap;
+    max-width: 160px;
+
+    &.service{
+      min-width: 250px;
+    }
+  }
 `;
 
 export const FooterColumnHeading = styled.h3`
@@ -67,6 +76,7 @@ export const FooterColumnList = styled.ul`
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   gap: 10px;
   align-items: flex-start;
