@@ -24,16 +24,19 @@ import image2 from "../../assets/interior images/post_2.jpg";
 import image3 from "../../assets/interior images/church_interior_image1.jpg";
 import image4 from "../../assets/interior images/HowtoStudyTheBible.jpg";
 import image5 from "../../assets/interior images/stressed-blessed-find-time-faith-student.jpg";
+import image6 from "../../assets/members/ll";
 import clock from '../../assets/others/St-Georges-Tower-7017-2.jpg';
 import aboutImage from "../../assets/members/abb.jpg";
 import HomeFellowship from "../../assets/home fellowship/istockphoto-174792161-612x612.jpg";
 import WomenFellowship from "../../assets/women fellowship/Downtown-Ofaakor-Area-Womens-Ministry-Hosts-‘The-Complete-Woman-Series-web-2000x1125.jpg";
 import Men from "../../assets/comm/men.jpg";
-import Youth from "../../assets/comm/youth.jpg";
+import Youth from "../../assets/members/angle";
 import BibleStudies from "../../assets/comm/bibleStudeis.jpg";
-import instrument from "../../assets/comm/instur.webp";
+import instrument from "../../assets/members/instrumental";
+import MediaTeam from "../../assets/members/mediaTeam";
 import Prayer from "../../assets/comm/prayer warriors.jpg";
-import SundaySchool from "../../assets/comm/sundayschool.jpg.jpg";
+import Singers from "../../assets/members/singers";
+import SundaySchool from "../../assets/members/children.jpg";
 import Thump1 from '../../assets/comm/thump1.jpg';
 import Thump2 from '../../assets/comm/thump2.jpg';
 import Thump3 from '../../assets/comm/thump3.webp';
@@ -94,6 +97,12 @@ const Homescreen = () => {
       description: `No matter where you are in your spiritual journey, you have a place here with us. Together, we seek purpose and find strength in God.`,
       imagesUrl: `${image5}`,
     },
+    {
+      id: 6,
+      quote: `Welcome Home`,
+      description: `Wherever you are on your spiritual path, you are part of our family. Together, we grow in faith and find hope in God.`,
+      imagesUrl: `${image6}`,
+    }
   ];
 
   const upcomingEvents = [
@@ -152,11 +161,21 @@ const Homescreen = () => {
     },
     {
       id: 7,
+      image: `${MediaTeam}`,
+      group: 'The Media Group',
+    },
+    {
+      id: 8,
       image: `${Prayer}`,
       group: 'Prayer Warriors',
     },
     {
-      id: 8,
+      id: 9,
+      image: `${Singers}`,
+      group: 'Harmony Voices',
+    },
+    {
+      id: 10,
       image: `${SundaySchool}`,
       group: 'Children Ministry',
     },

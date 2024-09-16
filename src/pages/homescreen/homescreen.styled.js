@@ -296,9 +296,10 @@ export const ChurchGroups = styled.ul`
 
 export const ChurchGroup = styled.li`
     width: 300px;
-    height: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
-    position: relative;
     cursor: pointer;
 
     &:hover img{
@@ -307,10 +308,8 @@ export const ChurchGroup = styled.li`
 `
 
 export const ChurchGroupImageContainer = styled.div`
-    position: absolute;
-    inset: 0;
     width: 100%;
-    height: 100%; 
+    height: 150px; 
     overflow: hidden;
     z-index: 0;
 `
@@ -323,17 +322,15 @@ export const ChurchGroupImage = styled.img`
 `
 
 export const ChurchGroupName = styled.p`
-  position: absolute;
-  inset: 0;
   width: 100%;
-  height: 100%;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 600;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #1ea2b1;
   color: #fff;
   z-index: 10;
   transition: 0.3s ease-in-out;
