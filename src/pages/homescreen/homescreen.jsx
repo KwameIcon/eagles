@@ -283,8 +283,6 @@ const churchLeaders = [
     return () => clearInterval(interval);
   }, [welcomeMessages.length]);
 
-
-
   // Church leaaders slider
 const handleSlideCards = (direction) => {
   if (scrollCardRef.current) {

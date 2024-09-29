@@ -125,7 +125,7 @@ const SermonDetailsPage = () => {
             <RelatedSermonCard key={related.id}>
               <Link 
                 to={`/eagles-ccc/sermons-details/${related.id}`} 
-                state={{ sermon: related }} // Pass the related sermon data
+                state={{ sermon: related }}
                 style={{ color: '#000' }}
               >
                 <ImageContainer>
