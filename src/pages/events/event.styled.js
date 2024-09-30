@@ -19,6 +19,10 @@ export const ShowcaseHeader = styled.h1`
 
 export const ContentContainer = styled.div`
 
+
+    @media screen and (max-width: 480px) {
+        padding: 10px;
+    }
 `;
 
 // Page header text
@@ -51,6 +55,10 @@ export const EventHeaderServiceText = styled.p`
     font-size: 16px;
     color: rgba(0, 0, 0, 0.5);
     letter-spacing: 0.4rem;
+
+    @media screen and (max-width: 480px) {
+        text-align: center;
+    }
 `;
 
 export const EventHeaderText = styled.h1`

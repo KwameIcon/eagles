@@ -4,8 +4,13 @@ import { Link } from 'react-router-dom';
 export const EventDetailsContainer = styled.div`
   padding: 20px;
   text-align: center;
-  max-width: 800px; /* Optional: Limit max width for better readability */
-  margin: 0 auto; /* Center the container */
+  max-width: 800px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 480px) {
+    width: 100vw;
+    overflow: hidden;
+  }
 `;
 
 export const EventHero = styled.img`
@@ -123,5 +128,17 @@ export const VideoContainer = styled.div`
     border-radius: 8px;
     margin: auto;
     margin-top: 10px; 
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    height: 300px;
+    margin: 20px 0;
+    object-fit: cover;
+
+    video{
+      width: 100%;
+      height: 100%;
+    }
   }
 `;

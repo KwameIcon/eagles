@@ -15,10 +15,16 @@ export const ShowcaseHeaderContainer = styled.div`
 
 export const ShowcaseHeader = styled.h1`
     font-size: 70px;
+    text-align: center;
 `
 
 export const ContentContainer = styled.div`
-
+    width: 100%;
+    overflow: hidden;
+    
+    @media screen and (max-width: 480px) {
+        padding: 10px;
+    }
 `
 
 // page header text

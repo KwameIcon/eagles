@@ -31,6 +31,10 @@ export const HeroContent = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media screen and (max-width: 480px) {
+      width: 100%;
+  }
 `;
 
 export const SermonTitle = styled.h1`
@@ -60,18 +64,24 @@ export const WatchSermonButton = styled.button`
 export const SermonMediaSection = styled.section`
   padding: 20px;
   text-align: center;
+
+    @media screen and (max-width: 480px) {
+      height: 500px;
+    }
 `;
 
 export const MediaPlayer = styled.video`
   width: 80%;
   height: 650px;
   margin: 10px 0;
+
+    @media screen and (max-width: 480px) {
+      width: 95%;
+      height: 100%;
+      object-fit: cover;
+    }
 `;
 
-export const AudioPlayer = styled.audio`
-  width: 80%;
-  margin: 10px 0;
-`;
 
 export const DownloadTranscriptButton = styled.button`
   padding: 10px 20px;
@@ -83,6 +93,8 @@ export const DownloadTranscriptButton = styled.button`
 
 export const SermonDetailsSection = styled.section`
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   align-items: center;
   justify-content: space-around;
   padding: 30px;
@@ -157,6 +169,10 @@ export const Wrapper = styled.section`
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+
+    @media screen and (max-width: 480px) {
+      gap: 10px;
+    }
 `;
 
 export const RelatedSermonCard = styled.div`
@@ -165,7 +181,10 @@ export const RelatedSermonCard = styled.div`
   display: inline-block;
   margin: 20px;
   text-align: left;
-  /* border: 1px solid #ccc; */
+
+  @media screen and (max-width: 480px) {
+    height: 300px;
+  }
 `;
 
 export const ImageContainer = styled.div`
