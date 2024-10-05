@@ -4,6 +4,7 @@ import {BgImage, CloseButton, Controllers, HeaderContainer, HeaderTop, Image, Lo
 import ChurchLogo from '../../assets/logo/logo.png';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from "react-icons/fa";
+import blaze from '../../assets/others/blaze.gif';
 
 const Header = ({ textChildren, imageChildren, isZoomingOut }) => {
 
@@ -55,7 +56,7 @@ const Header = ({ textChildren, imageChildren, isZoomingOut }) => {
       <HeaderTop isHeaderFix = {isHeaderFix}>
         <LogoContainer>
           <Logo src={ChurchLogo} alt="CCC" />
-          <LogoText isHeaderFix = {isHeaderFix}><span style={{ color: "gold" }}> Calvary </span> Charismatic Centre </LogoText>
+          <LogoText isHeaderFix = {isHeaderFix}><span style={{ backgroundImage: `url(${blaze})` }}> Calvary </span> Charismatic Centre </LogoText>
         </LogoContainer>
 
         <NavbarsContainer isMobileNav = {isMobileNav} >

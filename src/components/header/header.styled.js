@@ -107,6 +107,14 @@ export const LogoText = styled.h2`
   font-family: "Lobster";
   font-weight: 500;
 
+  span{
+    background-position: center;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
   @media screen and (max-width: 430px) {
     line-height: 18px;
   }
