@@ -5,6 +5,7 @@ export const GalleryContainer = styled.div`
   text-align: center;
 `;
 
+
 export const PageTitle = styled.h1`
   font-size: 7rem;
   color: #fff;

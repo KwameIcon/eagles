@@ -16,6 +16,7 @@ import recentImage1 from '../../assets/interior images/church_interior_image1.jp
 import recentImage2 from '../../assets/interior images/church_interior.jpg';
 import oldImage1 from '../../assets/others/christian-church-africa-6746558.webp';
 import oldImage2 from '../../assets/others/christian-church-africa-6746558.webp';
+import { ShowcaseHeader, ShowcaseHeaderContainer } from '../events/event.styled';
 
 const GalleryPage = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -40,9 +41,18 @@ const GalleryPage = () => {
     setModalOpen(false);
   };
 
+
+  const returnShowcaseHeader = () => {
+    return (
+      <ShowcaseHeaderContainer>
+        <ShowcaseHeader>Gallery</ShowcaseHeader>
+      </ShowcaseHeaderContainer>
+    );
+  }
+
   return (
     <div>
-      <Header textChildren="Gallery" imageChildren="/path/to/header-image.jpg" isZoomingOut={false} />
+      <Header textChildren={returnShowcaseHeader()} imageChildren={recentImage2} isZoomingOut={false} />
 
       <GalleryContainer>
         <GallerySection>

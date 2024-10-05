@@ -9,10 +9,12 @@ import {
   MemberImage,
   MemberName,
   MemberRole,
-} from './about.styled'; // Import your styled components
+} from './about.styled'; 
+import {ShowcaseHeader, ShowcaseHeaderContainer} from '../events/event.styled'
 import Header from '../../components/header/header';
 import AppFooter from '../../components/footer/footer';
 import ShowcaseImage from '../../assets/interior images/post_2.jpg'
+import Layout from '../../components/layout/layout';
 
 const AboutPage = () => {
   const teamMembers = [
@@ -21,59 +23,23 @@ const AboutPage = () => {
     { id: 3, name: 'Alice Johnson', role: 'Worship Leader', image: '/path/to/worship_leader_image.jpg' },
   ];
 
+
+
+  const returnShowcaseHeader = () => {
+    return (
+      <ShowcaseHeaderContainer>
+        <ShowcaseHeader>About Us</ShowcaseHeader>
+      </ShowcaseHeaderContainer>
+    );
+  }
+
+
   return (
     <div>
-      <Header textChildren="About Us" imageChildren= {ShowcaseImage} isZoomingOut={false} />
+      <Header textChildren={returnShowcaseHeader()} imageChildren= {ShowcaseImage} isZoomingOut={false} />
 
-      <AboutContainer>
-        <AboutSection>
-          <SectionTitle>Our Mission</SectionTitle>
-          <SectionContent>
-            <p>
-              We are committed to sharing the gospel and making disciples. Our mission is to be a Christ-centered
-              community that serves others and reflects the love of Jesus Christ in everything we do.
-            </p>
-          </SectionContent>
-        </AboutSection>
-
-        <AboutSection>
-          <SectionTitle>Our History</SectionTitle>
-          <SectionContent>
-            <p>
-              Founded in 1995, Calvary Charismatic Centre has grown from a small gathering to a vibrant community
-              of believers committed to worship, service, and outreach.
-            </p>
-          </SectionContent>
-        </AboutSection>
-
-        <AboutSection>
-          <SectionTitle>Our Values</SectionTitle>
-          <SectionContent>
-            <ul>
-              <li>Faith</li>
-              <li>Community</li>
-              <li>Service</li>
-              <li>Growth</li>
-              <li>Outreach</li>
-            </ul>
-          </SectionContent>
-        </AboutSection>
-
-        <AboutSection>
-          <SectionTitle>Our Team</SectionTitle>
-          <TeamContainer>
-            {teamMembers.map(member => (
-              <TeamMember key={member.id}>
-                <MemberImage src={member.image} alt={member.name} />
-                <MemberName>{member.name}</MemberName>
-                <MemberRole>{member.role}</MemberRole>
-              </TeamMember>
-            ))}
-          </TeamContainer>
-        </AboutSection>
-      </AboutContainer>
-
-      <AppFooter />
+      <Layout/>
+      <AppFooter/>
     </div>
   );
 };
