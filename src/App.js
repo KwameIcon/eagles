@@ -9,7 +9,9 @@ import EventsPage from './pages/events/event.jsx';
 import EventDetailsPage from './pages/events/eventDetails/eventDetails.jsx';
 import GalleryPage from './pages/gallery/gallery.jsx';
 import AboutPage from './pages/about/about.jsx';
-
+import Contact from './pages/contact/contact.jsx';
+import Donation from './pages/giving/donation.tsx';
+import AdminDashboard from './admin/AdminDashboard.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,6 +40,24 @@ const router = createBrowserRouter([
   {
     path: "/eagles-ccc/about us/",
     element: <AboutPage/>
+  },
+  {
+    path: "/eagles-ccc/contact Us/",
+    element: <Contact/>
+  },
+  {
+    path: "/eagles-ccc/giving/",
+    element: <Donation/>
+  },
+    // Admin Login Route
+  {
+    path: "/admin-login",
+    // element: <AdminLogin/>
+  },
+  // Admin Protected Route
+  {
+    path: "/admin-dashboard",
+    element: <AdminDashboard/>
   },
   {
     path: "*",

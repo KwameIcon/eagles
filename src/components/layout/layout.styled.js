@@ -9,12 +9,24 @@ export const LayoutContainer = styled.section`
     overflow: hidden;
     position: relative;
     color: rgba(0, 0, 0, 0.6);
+
+    @media screen and (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
 `
 
 export const RightSideBar = styled.div`
     position: absolute;
     width: 28%;
     left: 70%;
+
+    @media screen and (max-width: 480px) {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
 `
 
 export const RightSideBarHeader = styled.h2`
@@ -45,6 +57,7 @@ export const RightSideBarBtn = styled.li`
     justify-content: flex-start;
     border-bottom: 1px solid #ccc;
     transition: 0.3s ease-in-out;
+    user-select: none;
 
     & > .icon{
         font-size: 16px;
@@ -73,4 +86,10 @@ export const MainContent = styled.div`
     padding: 20px;
     overflow-y: scroll;
     line-height: 1.7rem;
+
+    @media screen and (max-width: 480px) {
+       position: relative;
+       width: 100%;
+       padding: 10px;
+    }
 `
