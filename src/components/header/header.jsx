@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { FiX } from 'react-icons/fi';
 import {BgImage, CloseButton, Controllers, HeaderContainer, HeaderTop, Image, Logo, LogoContainer, LogoText, NavBarListContainer, NavbarsContainer, NavButton, OpenButton, Overlay, SearchButton, SearchContainer, SearchHeaderText, SearchInputField, SearchSubText, Showcase,} from "./header.styled";
-import ChurchLogo from '../../assets/logo/logo.png';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from "react-icons/fa";
-import blaze from '../../assets/others/blaze.gif';
+import ChurchLogo from "../../admin/components/UIComponents/logo/logo";
 
 const Header = ({ textChildren, imageChildren, isZoomingOut }) => {
 
@@ -54,10 +53,7 @@ const Header = ({ textChildren, imageChildren, isZoomingOut }) => {
       <Overlay />
 
       <HeaderTop isHeaderFix = {isHeaderFix}>
-        <LogoContainer>
-          <Logo src={ChurchLogo} alt="CCC" />
-          <LogoText isHeaderFix = {isHeaderFix}><span style={{ backgroundImage: `url(${blaze})` }}> Calvary </span> Charismatic Centre </LogoText>
-        </LogoContainer>
+        <ChurchLogo isHeaderFix = {isHeaderFix}/>
 
         <NavbarsContainer isMobileNav = {isMobileNav} >
           <NavBarListContainer>
