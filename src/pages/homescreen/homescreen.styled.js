@@ -115,7 +115,6 @@ export const ReadMoreBtn = styled.div`
 // body
 export const Body = styled.section`
     width: 100%;
-    border: 1px solid red;
     padding: 20px;
     color: rgba(0, 0, 0, 0.6);
     height: auto;
